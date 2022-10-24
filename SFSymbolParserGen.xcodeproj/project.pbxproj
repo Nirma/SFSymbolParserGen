@@ -7,10 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E175C7B4290ACA99004BB947 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E175C7B3290ACA99004BB947 /* Parser.swift */; };
+		E175C7BC290AD496004BB947 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = E175C7BB290AD496004BB947 /* main.swift */; };
+		E175C7C7290AD7D2004BB947 /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = E175C7C6290AD7D2004BB947 /* ArgumentParser */; };
 		E1B1513B2904EDC700A3EE36 /* SFSymbolParserGen.docc in Sources */ = {isa = PBXBuildFile; fileRef = E1B1513A2904EDC700A3EE36 /* SFSymbolParserGen.docc */; };
 		E1B151412904EDC700A3EE36 /* SFSymbolParserGen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1B151362904EDC700A3EE36 /* SFSymbolParserGen.framework */; };
 		E1B151462904EDC700A3EE36 /* SFSymbolParserGenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B151452904EDC700A3EE36 /* SFSymbolParserGenTests.swift */; };
 		E1B151472904EDC700A3EE36 /* SFSymbolParserGen.h in Headers */ = {isa = PBXBuildFile; fileRef = E1B151392904EDC700A3EE36 /* SFSymbolParserGen.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E1B151512904EEB600A3EE36 /* SymbolStringParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B151502904EEB600A3EE36 /* SymbolStringParser.swift */; };
+		E1B1515329081FFD00A3EE36 /* EnumGen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B1515229081FFD00A3EE36 /* EnumGen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,15 +28,40 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		E175C7B7290AD496004BB947 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		E175C7B3290ACA99004BB947 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		E175C7B9290AD496004BB947 /* SymbolGen */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SymbolGen; sourceTree = BUILT_PRODUCTS_DIR; };
+		E175C7BB290AD496004BB947 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		E1B151362904EDC700A3EE36 /* SFSymbolParserGen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SFSymbolParserGen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1B151392904EDC700A3EE36 /* SFSymbolParserGen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFSymbolParserGen.h; sourceTree = "<group>"; };
 		E1B1513A2904EDC700A3EE36 /* SFSymbolParserGen.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = SFSymbolParserGen.docc; sourceTree = "<group>"; };
 		E1B151402904EDC700A3EE36 /* SFSymbolParserGenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SFSymbolParserGenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1B151452904EDC700A3EE36 /* SFSymbolParserGenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbolParserGenTests.swift; sourceTree = "<group>"; };
+		E1B151502904EEB600A3EE36 /* SymbolStringParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolStringParser.swift; sourceTree = "<group>"; };
+		E1B1515229081FFD00A3EE36 /* EnumGen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumGen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		E175C7B6290AD496004BB947 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E175C7C7290AD7D2004BB947 /* ArgumentParser in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E1B151332904EDC700A3EE36 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -50,12 +80,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E175C7BA290AD496004BB947 /* SymbolGen */ = {
+			isa = PBXGroup;
+			children = (
+				E175C7BB290AD496004BB947 /* main.swift */,
+			);
+			path = SymbolGen;
+			sourceTree = "<group>";
+		};
+		E175C7C5290AD7D2004BB947 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E1B1512C2904EDC700A3EE36 = {
 			isa = PBXGroup;
 			children = (
 				E1B151382904EDC700A3EE36 /* SFSymbolParserGen */,
 				E1B151442904EDC700A3EE36 /* SFSymbolParserGenTests */,
+				E175C7BA290AD496004BB947 /* SymbolGen */,
 				E1B151372904EDC700A3EE36 /* Products */,
+				E175C7C5290AD7D2004BB947 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +111,7 @@
 			children = (
 				E1B151362904EDC700A3EE36 /* SFSymbolParserGen.framework */,
 				E1B151402904EDC700A3EE36 /* SFSymbolParserGenTests.xctest */,
+				E175C7B9290AD496004BB947 /* SymbolGen */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -73,6 +121,9 @@
 			children = (
 				E1B151392904EDC700A3EE36 /* SFSymbolParserGen.h */,
 				E1B1513A2904EDC700A3EE36 /* SFSymbolParserGen.docc */,
+				E1B151502904EEB600A3EE36 /* SymbolStringParser.swift */,
+				E1B1515229081FFD00A3EE36 /* EnumGen.swift */,
+				E175C7B3290ACA99004BB947 /* Parser.swift */,
 			);
 			path = SFSymbolParserGen;
 			sourceTree = "<group>";
@@ -99,6 +150,26 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		E175C7B8290AD496004BB947 /* SymbolGen */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E175C7BD290AD496004BB947 /* Build configuration list for PBXNativeTarget "SymbolGen" */;
+			buildPhases = (
+				E175C7B5290AD496004BB947 /* Sources */,
+				E175C7B6290AD496004BB947 /* Frameworks */,
+				E175C7B7290AD496004BB947 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SymbolGen;
+			packageProductDependencies = (
+				E175C7C6290AD7D2004BB947 /* ArgumentParser */,
+			);
+			productName = SymbolGen;
+			productReference = E175C7B9290AD496004BB947 /* SymbolGen */;
+			productType = "com.apple.product-type.tool";
+		};
 		E1B151352904EDC700A3EE36 /* SFSymbolParserGen */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E1B1514A2904EDC700A3EE36 /* Build configuration list for PBXNativeTarget "SFSymbolParserGen" */;
@@ -113,6 +184,8 @@
 			dependencies = (
 			);
 			name = SFSymbolParserGen;
+			packageProductDependencies = (
+			);
 			productName = SFSymbolParserGen;
 			productReference = E1B151362904EDC700A3EE36 /* SFSymbolParserGen.framework */;
 			productType = "com.apple.product-type.framework";
@@ -145,6 +218,9 @@
 				LastSwiftUpdateCheck = 1400;
 				LastUpgradeCheck = 1400;
 				TargetAttributes = {
+					E175C7B8290AD496004BB947 = {
+						CreatedOnToolsVersion = 14.0.1;
+					};
 					E1B151352904EDC700A3EE36 = {
 						CreatedOnToolsVersion = 14.0.1;
 					};
@@ -162,12 +238,16 @@
 				Base,
 			);
 			mainGroup = E1B1512C2904EDC700A3EE36;
+			packageReferences = (
+				E175C7C0290AD761004BB947 /* XCRemoteSwiftPackageReference "swift-argument-parser" */,
+			);
 			productRefGroup = E1B151372904EDC700A3EE36 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				E1B151352904EDC700A3EE36 /* SFSymbolParserGen */,
 				E1B1513F2904EDC700A3EE36 /* SFSymbolParserGenTests */,
+				E175C7B8290AD496004BB947 /* SymbolGen */,
 			);
 		};
 /* End PBXProject section */
@@ -190,11 +270,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		E175C7B5290AD496004BB947 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E175C7BC290AD496004BB947 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E1B151322904EDC700A3EE36 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E175C7B4290ACA99004BB947 /* Parser.swift in Sources */,
+				E1B1515329081FFD00A3EE36 /* EnumGen.swift in Sources */,
 				E1B1513B2904EDC700A3EE36 /* SFSymbolParserGen.docc in Sources */,
+				E1B151512904EEB600A3EE36 /* SymbolStringParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,6 +308,24 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		E175C7BE290AD496004BB947 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		E175C7BF290AD496004BB947 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		E1B151482904EDC700A3EE36 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -393,6 +502,7 @@
 		E1B1514E2904EDC700A3EE36 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -407,6 +517,7 @@
 		E1B1514F2904EDC700A3EE36 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -421,6 +532,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		E175C7BD290AD496004BB947 /* Build configuration list for PBXNativeTarget "SymbolGen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E175C7BE290AD496004BB947 /* Debug */,
+				E175C7BF290AD496004BB947 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E1B151302904EDC700A3EE36 /* Build configuration list for PBXProject "SFSymbolParserGen" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -449,6 +569,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E175C7C0290AD761004BB947 /* XCRemoteSwiftPackageReference "swift-argument-parser" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-argument-parser.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E175C7C6290AD7D2004BB947 /* ArgumentParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E175C7C0290AD761004BB947 /* XCRemoteSwiftPackageReference "swift-argument-parser" */;
+			productName = ArgumentParser;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E1B1512D2904EDC700A3EE36 /* Project object */;
 }
