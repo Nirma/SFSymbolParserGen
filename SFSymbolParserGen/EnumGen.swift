@@ -55,7 +55,7 @@ final class EnumGen {
             result += "\n"
             guard let name = variants.first?.name else { return result }
             let sanitizedName = SymbolStringParser.sanitizeIdentifier(name, isTypeName: true)
-            result += "\n" + padding() + "enum \(sanitizedName) {"
+            result += "\n" + padding() + "enum \(sanitizedName): String {"
             
             for symbol in variants {
                 let rawCase = makeEnumCase(from: symbol, indentationLevel: 2, isNestedEnum: !symbol.components.isEmpty)
@@ -80,7 +80,7 @@ final class EnumGen {
         }
         
         return """
-        enum \(name) {
+        enum \(name): String {
         \(result)
         }
 
