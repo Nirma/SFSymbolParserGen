@@ -63,5 +63,46 @@ final class SFSymbolParserGenTests: XCTestCase {
         let result = SymbolStringParser.parse(identifierText: input)
         XCTAssert(result == expected)
     }
+    
+    func testParserTop() {
+        let input = """
+        externaldrive
+        externaldrive.fill
+        externaldrive.badge.plus
+        externaldrive.fill.badge.plus
+        externaldrive.badge.minus
+        externaldrive.fill.badge.minus
+        externaldrive.badge.checkmark
+        externaldrive.fill.badge.checkmark
+        externaldrive.badge.xmark
+        externaldrive.fill.badge.xmark
+        externaldrive.badge.person.crop
+        """
+        
+        let expectedResult = """
+        enum SFSymbols {
 
+            case externaldrive = "externaldrive"/n
+
+            enum Externaldrive {
+                case fill = "externaldrive.fill"
+                case badgePlus = "externaldrive.badge.plus"
+                case fillBadgePlus = "externaldrive.fill.badge.plus"
+                case badgeMinus = "externaldrive.badge.minus"
+                case fillBadgeMinus = "externaldrive.fill.badge.minus"
+                case badgeCheckmark = "externaldrive.badge.checkmark"
+                case fillBadgeCheckmark = "externaldrive.fill.badge.checkmark"
+                case badgeXmark = "externaldrive.badge.xmark"
+                case fillBadgeXmark = "externaldrive.fill.badge.xmark"
+                case badgePersonCrop = "externaldrive.badge.person.crop"
+            }
+        }
+        
+        """
+        
+        let result = Parser.parse(name: "SFSymbols", rawInput: input)
+        print(result)
+        
+        XCTAssert(result == expectedResult)
+    }
 }

@@ -47,7 +47,7 @@ final class EnumGen {
         if let singleCase = singleCase {
             let rawCase = makeEnumCase(from: singleCase)
             if !rawCase.isEmpty {
-                result += "\n" + SymbolStringParser.sanitizeIdentifier(rawCase, isTypeName: false)
+                result += SymbolStringParser.sanitizeIdentifier(rawCase, isTypeName: false) + "/n"
             }
         }
         
